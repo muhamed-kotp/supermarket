@@ -1,0 +1,55 @@
+.Nav-fother {
+  display: flex;
+  width: 100% !important;
+  height: 10vh !important;
+}
+.first-container {
+  width: 40% !important;
+  display: flex !important;
+  justify-content: center;
+  margin-bottom: 0 !important;
+}
+.Lusion {
+  color: rgb(0, 0, 0) !important;
+  margin-left: 50px;
+  font-weight: 900;
+  opacity: 0.5;
+}
+.sec-container {
+  justify-content: end !important;
+  width: 60% !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+.navbar-brand {
+  color: rgb(0, 0, 0) !important;
+  opacity: 0.5;
+  margin-left: 30px;
+  font-weight: 800;
+}
+.navbar-brand:hover {
+  font-size: 28px;
+  color: rgb(27, 34, 28) !important;
+}
+.navbar-expand {
+  /* background-color: rgb(245 175 156) !important; */
+  background-color: rgb(255 230 219) !important;
+
+}
+
+.shopCart-logo {
+  font-size: 35px;
+  color: rgb(0, 0, 0) !important;
+  opacity: 0.5;
+}
+.ShoppingCarD-Btn {
+  background-color: rgb(255 230 219)!important;
+  border: none !important;
+  border-color: rgb(245 175 156) !important;
+  padding: 0 !important;
+  display: flex !important;
+  margin-right: 50px !important;
+  margin-left: 20px;
+}
