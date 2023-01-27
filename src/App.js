@@ -1,63 +1,121 @@
-import React, { useState } from "react";
-import Shop from "./Components/Shop";
+import React, { useState, useEffect } from "react";
+import SideBar from "./Components/SideBar";
 import Home from "./Components/Home";
 import Navs from "./Components/Navs";
 import { Routes, Route } from "react-router-dom";
-
-import ShoppingCarD from "./Components/ShoppingCarD";
-import shopC1 from "./Photos/shopC1.jpg";
-import shopC2 from "./Photos/shopC2.jpg";
-import shopC3 from "./Photos/shopC3.jpg";
-import shopC4 from "./Photos/shopC4.jpg";
-import shopC5 from "./Photos/shopC5.jpg";
-import shopC6 from "./Photos/shopC6.jpg";
-import shopC7 from "./Photos/shopC7.jpg";
-import shopC8 from "./Photos/shopC8.jpg";
-
-// 'Quilted Gilet With Hood', 'Shirt' , 'Jeans', 'Hood', 'Clothing',' Bag Brand', 'Accessories', 'Shoes'
-
+import "./Style/App.css";
+import Products from "./Components/Products";
+import Details from "./Components/Details";
+import Newproducts from "./Components/Newproducts";
+import Edit from "./Components/Edit";
+import Store from "./Context/Store";
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const App = () => {
-  const [Products] = useState([
-    {
-      id: 1,
-      name: "Gilet With Hood",
-      price: 300,
-      count: 8,
-      img: shopC1,
-      pusrches: 1,
-    },
-    { id: 2, name: "Shirt", price: 220, count: 18, img: shopC2, pusrches: 1 },
-    { id: 3, name: "Shirt", price: 150, count: 6, img: shopC3, pusrches: 1 },
-    { id: 4, name: "Hood", price: 120, count: 12, img: shopC4, pusrches: 1 },
-    { id: 5, name: "Hood", price: 120, count: 15, img: shopC5, pusrches: 1 },
-    { id: 6, name: "Hood", price: 180, count: 6, img: shopC6, pusrches: 1 },
-    { id: 7, name: "Jeans", price: 250, count: 16, img: shopC7, pusrches: 1 },
-    { id: 8, name: "Jeans", price: 250, count: 15, img: shopC8, pusrches: 1 },
-    { id: 9, name: "Clothing", price: 350, count: 9, img: shopC1, pusrches: 1 },
-  ]);
-  const [data, setdata] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [maxprice, setmaxprice] = useState(0);
+  const [minprice, setminprice] = useState(0);
+  const [fewestItem, setfewestItem] = useState(0);
+  const [fewestID, setfewestID] = useState(0);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const buy = (obj) => {
-    // console.log(obj.id);
-    data.push(obj);
-    let arr = [...new Set(data)];
-    setdata(arr);
+  // console.log(products[0].id);
+  useEffect(() => {
+    PutMyProduct();
+  }, []);
+
+  const PutMyProduct = () => {
+    setProducts([
+      {
+        name: "Chepsy",
+        price: 1000,
+        count: 400,
+        id: 1,
+      },
+      {
+        name: "Pepsi",
+        price: 50,
+        count: 500,
+        id: 2,
+      },
+      {
+        name: "Cake",
+        price: 800,
+        count: 50,
+        id: 3,
+      },
+      {
+        name: "Juise",
+        price: 200,
+        count: 80,
+        id: 4,
+      },
+    ]);
+    // let max = products[0].price;
+    // let min = products[0].price;
+    // let minItem = products[0].count;
+    // let minId = products[0].id;
+
+    // products.map((obj) => {
+    //   if (obj.price >= max) {
+    //     max = obj.price;
+    //     setmaxprice(max);
+    //   }
+    //   if (obj.price <= min) {
+    //     min = obj.price;
+    //     setminprice(min);
+    //   }
+    //   if (obj.count <= minItem) {
+    //     minItem = obj.count;
+    //     minId = obj.id;
+    //     setfewestItem(minItem);
+    //     setfewestID(minId);
+    //   }
+    //   return products;
+    // });
   };
-  const add = (obj) => {
-    let hanledata = [...data];
-    hanledata = hanledata.map((e) => {
-      if (e.id === obj.id) {
-        if (e.count >= 1) {
-          e.pusrches = e.pusrches + 1;
-          e.count = e.count - 1;
+
+  const addnew = () => {
+    if (location.pathname === "/NewProducts") {
+      let newObj = location.state;
+      let allProducts = products;
+      allProducts.push(newObj);
+      setProducts(allProducts);
+      return products;
+    }
+  };
+
+  useEffect(() => {
+    addnew();
+  }, [location]);
+
+  const edit = () => {
+    if (location.pathname === "/ProductsEdit") {
+      let choosenObj = location.state;
+      let allProducts = [...products];
+      console.log(choosenObj.id);
+
+      allProducts = allProducts.map((obj) => {
+        if (obj.id == choosenObj.id) {
+          obj.name = choosenObj.name;
+          obj.price = choosenObj.price;
+          obj.count = choosenObj.count;
+          setProducts(allProducts);
         }
-      }
-      return e;
-    });
-    setdata(hanledata);
+
+        console.log(allProducts);
+        return allProducts;
+      });
+    }
   };
+
+  useEffect(() => {
+    edit();
+  }, [location]);
+
   const dec = (obj) => {
-    let hanledata = [...data];
+    let hanledata = [...products];
     hanledata = hanledata.map((e) => {
       if (e.id === obj.id) {
         if (e.pusrches >= 2) {
@@ -67,32 +125,84 @@ const App = () => {
       }
       return e;
     });
-    setdata(hanledata);
-  };
-  const remove = (obj) => {
-    setdata((e) => e.filter((data) => data.id !== obj.id));
+    setProducts(hanledata);
   };
 
+  const add = (obj) => {
+    let hanledata = [...products];
+    hanledata = hanledata.map((e) => {
+      if (e.id === obj.id) {
+        if (e.count >= 1) {
+          e.pusrches = e.pusrches + 1;
+          e.count = e.count - 1;
+        }
+      }
+      return e;
+    });
+    setProducts(hanledata);
+  };
+
+  const remove = (obj) => {
+    setProducts((e) => e.filter((products) => products.name !== obj.name));
+    // sorting();
+  };
+  const sorting = () => {
+    let ID = 1;
+    let myData = [...products];
+
+    myData[0].id = ID;
+
+    myData = myData.map((e) => {
+      if (e.id !== ID) {
+        ID++;
+        e.id = ID;
+      }
+      return myData;
+    });
+
+    console.log(myData[0].id);
+
+    // myData.sort((a, b) => a.id - b.id);
+    // setProducts(myData);
+    // console.log(products[1].id);
+  };
+  // useEffect(() => {
+  //   sorting();
+  // }, []);
+
   return (
-    <div>
-      <Navs data={data} />
-      <Routes>
-        <Route path="/" element={<Home myProducts={Products} />} />
-        <Route
-          path="/Shop"
-          element={<Shop data myProducts={Products} buy={buy} />}
-        />
-        <Route
-          path="/ShoppingCarD"
-          element={
-            <ShoppingCarD data={data} remove={remove} add={add} dec={dec} />
-          }
-        />
-        <Route path="/Shop/ShoppingCarD.js" element={<ShoppingCarD />} />
-        <Route path="/Navs/ShoppingCarD.js" element={<ShoppingCarD />} />
-        <Route path="/Navs" element={<Navs />} />
-      </Routes>
-    </div>
+    <Store.Provider
+      value={{
+        storeProducts: products,
+        storeMaxprice: maxprice,
+        storeMinprice: minprice,
+        storefewestItem: fewestItem,
+        storefewestID: fewestID,
+
+        StoreAddnew: addnew,
+        StoreEdit: edit,
+        StoreAdd: add,
+        StoreDec: dec,
+        StoreRemove: remove,
+        storePutMyProduct: PutMyProduct,
+      }}
+    >
+      <div>
+        <Navs />
+
+        <SideBar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/ProductsEdit" element={<Products />} />
+          <Route path="/NewProducts" element={<Products />} />
+          <Route path="/Newproducs" element={<Newproducts />} />
+          <Route path="/Edit/:ID" element={<Edit />} />
+          <Route path="/Products/:ID" element={<Details />} />
+        </Routes>
+      </div>
+    </Store.Provider>
   );
 };
 export default App;

@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "prodcuts": [
+    {
+      "name": "BasTu",
+      "price": "1000",
+      "items": "400",
+      "id": 2
+    },
+    {
+      "name": "pepsi",
+      "price": "50",
+      "items": "500",
+      "id": 3
+    },
+    {
+      "name": "Cake",
+      "price": "800",
+      "items": "050",
+      "id": 4
+    },
+    {
+      "name": "Juise",
+      "price": "200",
+      "items": "80",
+      "id": 5
+    }
+  ]
+}

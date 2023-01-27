@@ -1,0 +1,21 @@
+.form-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  height: 100vh;
+}
+.New-lable {
+  font-weight: 800;
+  font-size: 25px;
+  opacity: 0.8 !important;
+}
+.New-input {
+  background-color: #2a292cab !important;
+  color: white !important;
+  margin-bottom: 30px;
+  font-size: 20px !important;
+}
+.New-input::placeholder {
+  color: white !important;
+  opacity: 0.5 !important;
+}

@@ -1,0 +1,18 @@
+.nav-link {
+  opacity: 0.8;
+  color: white !important;
+}
+.side-nav-cont {
+  background-color: #60666b;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.side-nav-link {
+  font-size: 23px;
+  font-weight: 800;
+}
+.side-cont {
+  justify-content: space-around !important;
+}

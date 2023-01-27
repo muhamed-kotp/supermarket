@@ -1,0 +1,22 @@
+.sideBar {
+  height: 100vh !important;
+  font-size: 30px !important;
+  background-color: #56203a !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+:root {
+  overflow-x: hidden;
+}
+.col-10 {
+  background-color: rgb(236, 230, 230);
+}
+
+@media screen and (max-width: 991px) {
+  .sideBar {
+    display: none;
+  }
+}
