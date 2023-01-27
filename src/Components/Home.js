@@ -7,26 +7,15 @@ import s1 from "../Photos/pizza.jpg";
 import s2 from "../Photos/pepsi.jpg";
 import s3 from "../Photos/shetos.jpg";
 import s4 from "../Photos/tost.jpg";
-import t1 from "../Photos/t1.jpg";
-import t2 from "../Photos/t2.jpg";
-import t3 from "../Photos/t3.jpg";
-import t4 from "../Photos/t4.jpg";
+
 import t5 from "../Photos/market3.jpg";
 import t6 from "../Photos/market4.jpg";
-import fifth1 from "../Photos/fifth1.jpg";
-import fifth2 from "../Photos/fifth2.jpg";
-import fifth3 from "../Photos/fifth3.jpg";
-import fifth4 from "../Photos/fifth4.jpg";
-import fifth5 from "../Photos/fifth5.jpg";
-import fifth6 from "../Photos/fifth6.jpg";
+
 import "../Style/Home.css";
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
+
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import { Badge } from "react-bootstrap";
-import { useState } from "react";
 
 const Home = () => {
   return (
