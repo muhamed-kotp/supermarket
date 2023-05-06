@@ -44,7 +44,7 @@ const Newproducts = () => {
     navigate("/NewProducts", { state: { name, price, count, id } });
   };
   return (
-    <Form className="New-products-cont" onSubmit={formhandle}>
+    <Form className="form-container" onSubmit={formhandle}>
       <Form.Group className="mb-3" controlId="formBasicEmail1">
         <Form.Label>Product name</Form.Label>
         <Form.Control
