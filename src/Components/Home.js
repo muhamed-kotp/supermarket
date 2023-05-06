@@ -121,7 +121,7 @@ const Home = () => {
           <div className="Hurry ">Hurry, Quantities Limited! </div>
 
           <div className="win-cont">
-            <div className="win"> WIN 250 EGP </div>
+            <div className="win"> Free Cash Back </div>
             <div className="orders">
               ON ALL ORDERS <br /> OVER 800 EGP
             </div>
@@ -171,116 +171,123 @@ const Home = () => {
 
       {/* ---------------------------fifth-group---------------------------------------------------- */}
 
-      <footer className="site-footer">
-        <div className="container">
-          <div className="footer-nav-title-cont">
-            <div className="footer-nav-title nav-title navbar-brand" href="#">
-              Supermarkets{" "}
+      <footer className="site-footer bg-black ">
+        <div bg="dark" className="ms-5">
+          <div className=" foot-contt ">
+            <div className="footer-nav-title-cont">
+              <div className="footer-nav-title nav-title navbar-brand" href="#">
+                Supermarkets{" "}
+              </div>
             </div>
+
+            <div className="row footer-roow">
+              <div className="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p className="text-justify">
+                  supermarket, large retail store operated on a self-service
+                  basis, selling groceries, fresh produce, meat, bakery and
+                  dairy products, and sometimes an assortment of nonfood goods.
+                  Supermarkets gained acceptance in the United States during the
+                  1930s. The early stores were usually located in reconverted
+                  industrial buildings in outlying areas; they had no elaborate
+                  display facilities, and their primary advantage was their low
+                  prices. During the 1940s and ’50s, they became the major
+                  food-marketing channel in the United States, and in the 1950s
+                  they spread through much of Europe.
+                </p>
+              </div>
+
+              <div className="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul className="footer-links">
+                  <li>
+                    <div>Fruits</div>
+                  </li>
+                  <li>
+                    <div>vegetables</div>
+                  </li>
+                  <li>
+                    <div>Fresh food</div>
+                  </li>
+                  <li>
+                    <div>Juise</div>
+                  </li>
+                  <li>
+                    <div>Top Sells</div>
+                  </li>
+                  <li>
+                    <div>Pleats</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="w-100 " bg="dark">
+                <div className="col-xs-6 col-md-3">
+                  <h6>Quick Links</h6>
+                  <ul className="footer-links">
+                    <li>
+                      <div>About Us</div>
+                    </li>
+                    <li>
+                      <div>Contact Us</div>
+                    </li>
+                    <li>
+                      <div>Contribute</div>
+                    </li>
+                    <li>
+                      <div>Privacy Policy</div>
+                    </li>
+                    <li>
+                      <div>Sitemap</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr />
           </div>
-
-          <div className="row">
-            <div className="col-sm-12 col-md-6">
-              <h6>About</h6>
-              <p className="text-justify">
-                supermarket, large retail store operated on a self-service
-                basis, selling groceries, fresh produce, meat, bakery and dairy
-                products, and sometimes an assortment of nonfood goods.
-                Supermarkets gained acceptance in the United States during the
-                1930s. The early stores were usually located in reconverted
-                industrial buildings in outlying areas; they had no elaborate
-                display facilities, and their primary advantage was their low
-                prices. During the 1940s and ’50s, they became the major
-                food-marketing channel in the United States, and in the 1950s
-                they spread through much of Europe.
-              </p>
-            </div>
-
-            <div className="col-xs-6 col-md-3">
-              <h6>Categories</h6>
-              <ul className="footer-links">
-                <li>
-                  <div>Fruits</div>
-                </li>
-                <li>
-                  <div>vegetables</div>
-                </li>
-                <li>
-                  <div>Fresh food</div>
-                </li>
-                <li>
-                  <div>Juise</div>
-                </li>
-                <li>
-                  <div>Top Sells</div>
-                </li>
-                <li>
-                  <div>Pleats</div>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-xs-6 col-md-3">
-              <h6>Quick Links</h6>
-              <ul className="footer-links">
-                <li>
-                  <div>About Us</div>
-                </li>
-                <li>
-                  <div>Contact Us</div>
-                </li>
-                <li>
-                  <div>Contribute</div>
-                </li>
-                <li>
-                  <div>Privacy Policy</div>
-                </li>
-                <li>
-                  <div>Sitemap</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <hr />
         </div>
-        <div className="container w-100 ">
-          <div className="row">
-            <div className="col-md-8 col-sm-6 col-xs-12">
-              <p className="copyright-text">
-                Copyright &copy; 2023 Nast. All rights reserved. Use of this
-                site constitutes acceptance of our User Agreement and Privacy
-                Policy and Cookie Statement and Your California Privacy Rights.
-                WoW may earn a portion of sales from products that are purchased
-                through our site as part of our Affiliate Partnerships with
-                retailers. The material on this site may not be reproduced,
-                distributed, transmitted, cached or otherwise used, except with
-                the prior written permission of Condé Nast
-              </p>
-            </div>
 
-            <div className="col-md-4 col-sm-6 col-xs-12">
-              <ul className="social-icons">
-                <li>
-                  <a className="facebook" href="#">
-                    <i className="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="twitter" href="#">
-                    <i className="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="dribbble" href="#">
-                    <i className="fa fa-dribbble"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="linkedin" href="#">
-                    <i className="fa fa-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
+        <div className="bg-black">
+          <div className=" ms-5  w-100 ">
+            <div className="row footer-roow">
+              <div className="col-md-8 col-sm-6 col-xs-12">
+                <p className="copyright-text text-justify">
+                  Copyright &copy; 2023 Nast. All rights reserved. Use of this
+                  site constitutes acceptance of our User Agreement and Privacy
+                  Policy and Cookie Statement and Your California Privacy
+                  Rights. WoW may earn a portion of sales from products that are
+                  purchased through our site as part of our Affiliate
+                  Partnerships with retailers. The material on this site may not
+                  be reproduced, distributed, transmitted, cached or otherwise
+                  used, except with the prior written permission of Condé Nast
+                </p>
+              </div>
+
+              <div className="col-md-4 col-sm-6 col-xs-12">
+                <ul className="social-icons me-5">
+                  <li>
+                    <a className="facebook" href="#">
+                      <i className="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="twitter" href="#">
+                      <i className="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dribbble" href="#">
+                      <i className="fa fa-dribbble"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a className="linkedin" href="#">
+                      <i className="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

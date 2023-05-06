@@ -10,14 +10,17 @@ const Navs = () => {
     <div>
       <Navbar className="nav-cont" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand>SuperMarket</Navbar.Brand>
+          {/* <Navbar.Brand>SuperMarket</Navbar.Brand> */}
           <Nav.Link className="nav-home" as={NavLink} to="/">
-            Home
+            SuperMarket
+          </Nav.Link>
+          {/* <Navbar.Brand>Admin</Navbar.Brand> */}
+          <Nav.Link className="side-nav-link" as={NavLink} to="/Products">
+            Control Products
           </Nav.Link>
         </Container>
       </Navbar>
     </div>
   );
 };
-
 export default Navs;

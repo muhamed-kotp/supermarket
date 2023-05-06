@@ -94,7 +94,7 @@ const App = () => {
     if (location.pathname === "/ProductsEdit") {
       let choosenObj = location.state;
       let allProducts = [...products];
-      console.log(choosenObj.id);
+      // console.log(choosenObj.id);
 
       allProducts = allProducts.map((obj) => {
         if (obj.id == choosenObj.id) {
@@ -146,26 +146,26 @@ const App = () => {
     setProducts((e) => e.filter((products) => products.name !== obj.name));
     // sorting();
   };
-  const sorting = () => {
-    let ID = 1;
-    let myData = [...products];
+  // const sorting = () => {
+  //   let ID = 1;
+  //   let myData = [...products];
 
-    myData[0].id = ID;
+  //   myData[0].id = ID;
 
-    myData = myData.map((e) => {
-      if (e.id !== ID) {
-        ID++;
-        e.id = ID;
-      }
-      return myData;
-    });
+  //   myData = myData.map((e) => {
+  //     if (e.id !== ID) {
+  //       ID++;
+  //       e.id = ID;
+  //     }
+  //     return myData;
+  //   });
 
-    console.log(myData[0].id);
+  //   console.log(myData[0].id);
 
-    // myData.sort((a, b) => a.id - b.id);
-    // setProducts(myData);
-    // console.log(products[1].id);
-  };
+  // myData.sort((a, b) => a.id - b.id);
+  // setProducts(myData);
+  // console.log(products[1].id);
+  // };
   // useEffect(() => {
   //   sorting();
   // }, []);
@@ -190,7 +190,7 @@ const App = () => {
       <div>
         <Navs />
 
-        <SideBar />
+        {/* <SideBar /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />

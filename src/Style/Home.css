@@ -545,6 +545,19 @@
   height: 100vh;
   background-size: cover;
 }
+
+.foot-contt {
+  width: 100%;
+  /* padding-left: 100px; */
+  box-sizing: border-box !important;
+}
+
+@media screen and (max-width: 991px) {
+  .footer-roow {
+    width: 100% !important;
+  }
+}
+
 @media screen and (max-width: 991px) and (min-width: 768px) {
   .Hurry {
     font-weight: 800;
@@ -780,13 +793,16 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .footer-roow {
+    margin-left: -45px !important;
+  }
   .advertise {
     margin-bottom: 150px !important;
   }
   .Hurry {
-    font-weight: 800;
+    font-weight: 700;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 20px;
     width: 200px;
   }
@@ -877,6 +893,7 @@
 
   .forth-group-ist-img {
     width: 100% !important;
+    margin-bottom: 60px;
   }
   .forth-group-scond-img {
     width: 100% !important;
@@ -913,6 +930,15 @@
   .thirdGroupCardDollar {
     font-size: 30px;
   }
+  .forth-group-shop-now1 {
+    padding: 5px !important;
+    width: 100px;
+    align-self: center;
+    border: 2px solid rgb(0, 0, 0) !important;
+    background-color: rgb(37, 37, 37) !important;
+    margin-bottom: 90px;
+    margin-top: 30px;
+  }
 }
 
 .site-footer {
@@ -921,7 +947,6 @@
   font-size: 15px;
   line-height: 24px;
   color: #737373;
-  height: 100vh;
 }
 .footer-nav-title-cont {
   width: 100%;
@@ -1002,6 +1027,11 @@
   .site-footer .social-icons {
     text-align: center;
   }
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
 }
 .social-icons {
   padding-left: 0;
@@ -1058,14 +1088,9 @@
 .social-icons a.dribbble:hover {
   background-color: #ea4c89;
 }
-@media (max-width: 767px) {
-  .social-icons li.title {
-    display: block;
-    margin-right: 0;
-    font-weight: 600;
-  }
-}
-
 html {
+  background-color: black;
+}
+.footer-roow {
   background-color: black;
 }
